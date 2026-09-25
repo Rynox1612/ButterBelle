@@ -1,17 +1,21 @@
 package com.butterbell.butterbell.product;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 @Entity
 @Table(name = "product")
 public class Product {
 
     @Id
-    private String productId;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID productId;
 
     private String productName;
 
@@ -20,11 +24,11 @@ public class Product {
     private String category;
 
     // Getter and Setter for productId
-    public String getProductId() {
+    public UUID getProductId() {
         return productId;
     }
 
-    public void setProductId(String productId) {
+    public void setProductId(UUID productId) {
         this.productId = productId;
     }
 
