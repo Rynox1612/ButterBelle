@@ -1,4 +1,4 @@
-# ButterBell frontend
+# ButterBelle frontend
 
 A React frontend for the product and customer APIs in the ButterBell Spring Boot application.
 
